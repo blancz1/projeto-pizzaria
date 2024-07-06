@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    
+}
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 100%;
+    
+    overflow-x: hidden;
+    background-color: #1f1e1f;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #1f1e1f;
+}
+
+
+
+
+
+.content {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    background-color: #1f1e1f;
+    color: white;
+    padding-left: 30rem;
+    padding-right: 30rem;
+} 
+.content .list-menu{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.content .list-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 65px;
+    padding-bottom: 23px;
+    transition: all 200ms ease-in;
+    
+    
+    
+    
+    
+}
+.list-menu li:hover {
+    background-color: #ffc5063a;
+    
+    
+    
+}
+
+
+
+
+
+.content .list-menu li a:hover {
+    background-color: #3333;
+    border-bottom: 4px solid #ffc506;
+    color: #ffc506;
+    
+}
+.logo {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 70px;
+    
+}
+.logo h3 {
+    font-size: 1rem;
+}
+
+.first-section {
+    height: 100vh; /* Ajuste para a altura da viewport */
+    background-image: linear-gradient(rgba(29, 29, 29, 0.418), rgba(29, 29, 29, 0.267)), url('img/fundopizza.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Adicione padding conforme necessário */
+}
+
+.first-section .principal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section h1 {
+    color: #ffc506;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+first-section h2 {
+    color: rgb(177,177,177);
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.btn button {
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #ffc506;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    transition: all 200ms ease-in;
+    margin: 0.5rem; /* Adicione margem entre os botões */
+}
+
+.btn button:hover {
+    border: 1px solid #ffc506;
+    background-color: transparent;
+    color: #ffc506;
+}
+
+.sobre-nos {
+    background-color: #1f1e1f;
+    width: 100%;
+    padding: 5rem 2rem; /* Adicione padding conforme necessário */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    
+}
+
+.sobre-nos img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 2rem;
+    border: 2px solid rgb(155,155,155);
+}
+
+.main {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column; /* Ajuste para coluna para melhor responsividade */
+    align-items: center;
+}
+
+.sobre-nos h2 {
+    padding-top: 2rem;
+}
+
+footer {
+    width: 100%;
+    background-color: #ffc506;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer h2 {
+    font-size: 19px;
+    margin: 0;
+}
+
+@media (max-width: 1244px) {
+    .main {
+        width: 100%;
+    }
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .content .list-menu {
+        position: static;
+        transform: none;
+    }
+    .sobre-nos img {
+        width: 100%;
+        max-width: 600px;
+        
+    }
+}
+
+@media (max-width: 1065px) {
+    html {
+        font-size: 100%;
+    }
+    .first-section h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 816px) {
+    .first-section h1 {
+        font-size: 2.5rem;
+    }
+    .first-section h2 {
+        font-size: 1.5rem;
+    }
+    .btn button {
+        width: 200px;
+        height: 50px;
+    }
+    html {
+        font-size: 80%;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 40px;
+    }
+    .content .list-menu {
+        display: none;
+    }
+    .one, .two, .three {
+        width: 80%;
+        height: 2px;
+        background-color: white;
+        margin: 6px auto;
+        transition-duration: 0.5s;
+    }
+    .menu-toggle {
+        width: 30px;
+        height: 30px;
+    }
+    .content.on {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 160vw;
+        background-color: rgba(30,31,30,0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .content.on .logo {
+        display: none;
+    }
+    .content.on .menu-toggle {
+        position: absolute;
+        right: 40px;
+        top: 12px;
+    }
+    .content.on .list-menu {
+        display: block;
+        
+    }
+    .content.on .list-menu li {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .content.on .menu-toggle .two {
+        opacity: 0;
+    }
+    .content.on .menu-toggle .one {
+        transform: rotate(45deg) translate(5px,-8px);
+    }
+    .content.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(20px,-6px);
+    }
+}
+
+@media (max-width:553px) {
+    .first-section h1 {
+        font-size: 1.5rem;
+    }
+    .first-section h2 {
+        font-size: 1.2rem;
+    }
+    .btn button {
+        width: 150px;
+        height: 50px;
+    }
+}
