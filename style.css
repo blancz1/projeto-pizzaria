@@ -96,6 +96,7 @@ body {
     height: 100vh; /* Ajuste para a altura da viewport */
     background-image: linear-gradient(rgba(29, 29, 29, 0.418), rgba(29, 29, 29, 0.267)), url('img/fundopizza.jpg');
     background-position: center top;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
