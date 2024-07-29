@@ -15,10 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.classList.add('overlay');
     document.body.appendChild(overlay);
 
-    expandableImage.addEventListener('click', function () {
-        imageContainer.classList.toggle('expanded');
-        overlay.classList.toggle('show');
-    });
+   
 
     overlay.addEventListener('click', function () {
         imageContainer.classList.remove('expanded');

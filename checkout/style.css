@@ -1,26 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-* {
+body {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    height: 100%;
+    
+    
+     
+}
+html {
+    overflow-x: hidden;
+    height: 100%;
     
 }
-
-
-
-html {
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffc506;
-    overflow-x: hidden;
-}
-
-
-
 
 
 .content {
@@ -39,6 +36,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    list-style-type: none;
     
 }
 
@@ -91,18 +89,15 @@ html {
 
 
 
-.principal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-footer h1{
+footer h1 {
     font-size: 20px;
     background-color: #1f1e1f;
     color: #ffc506;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
+    margin: 0;
+    
+    
 }
 .btn button{
     background-color: #1f1e1f;
@@ -236,87 +231,248 @@ footer h1{
     }
 }
 
-
-.products-grid {
+.orderSummary {
+    min-height: 100%;
+    
+    
+    
+    background-color: #ffc5062f;
+}
+.orderSummary h1{
+    text-align: center;
+    background-color: #ffc506;
+}
+.orderSummary h2 {
+    transform: translateX(13.7%);
+}
+.summaryContent {
+   
+    border: solid 1px lightgray;
+    width: 700px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    box-shadow: 1px 1px  1px rgba(0, 0, 0, 0.096);
+    border-radius: 5px;
+    
+  
+}
+.info{
+    
+}
+.product-content{
     display: grid;
-    grid-template-columns: repeat(5, 1fr) ;
-    padding: 50px;
-    background-color: #ffc5065b;
-    margin: 0;
+    /* Here, 1fr means the first column will take
+       up the remaining space in the grid. */
+    grid-template-columns: 1fr 350px;
+    column-gap: 12px;
+  
+    /* Use align-items: start; to prevent the elements
+       in the grid from stretching vertically. */
+    align-items: start;
+}
+.paymentContent {
+    
+
    
     
-}
-.product-content img {
-    padding-right: 20px;
-    padding-top: 20px;
-}
-
-
-
-.cardapio h1 {
-    background-color: #ffc506;
-    margin: 0;
+    width: 450px;
+    height: 375px;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 1px  1px rgba(0, 0, 0, 0.096);
     text-align: center;
+    
+    
+    
+    
+
+}
+.paymentOrder {
+    padding-bottom:  20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.deliveryTax {
+    padding-bottom: 20px;
+}
+.total {
+    padding-bottom: 20px;
 }
 
-.product-content p {
-    display: flex;
-    justify-content: center;
-    transform: translateX(-10%);
-    font-weight: bold;
+
+.product-name {
     font-size: 1.5rem;
-    
 }
-.button {
-    display: inline-block;
-    
-    
+.product-price {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-.product-content button {
-    padding-left: 5px;
-    
-    padding-right: 5px;
+.product-quantity {
+    padding-bottom: 10px;
 }
-.add {
+.quantity-input{
+    width: 30px;
+    display: none;
+}
+.save-quantity{
+    display: none;
+    background-color: #ffc506;
+    border-radius: 5px;
+}
+.is-editing-quantity .quantity-input{
+    display: initial;
+}
+.is-editing-quantity .save-quantity {
+    display: initial;
+}
+.is-editing-quantity .quantity-label {
+    display: none;
+  }
+  
+  .is-editing-quantity .update-quantity {
+    display: none;
+  }
+.updateBtn {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ffc506;
+
+}
+.deleteBtn {
+    padding: 5px;
     border-radius: 5px;
     background-color: #ffc506;
 }
 
-.cart-quantity {
-    color: #ffc506;
-}
-.add-to-cart {
+.container {
+    width: 900px;
     display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    left: 70%;
-    top: 4.5%;
-    font-size: 16px;
+    align-items: center;  
+}
+.image{
+    display: grid;
+    /* Here, 1fr means the first column will take
+       up the remaining space in the grid. */
+    grid-template-columns: 1fr 170px;
+    column-gap: 12px;
+  
+    /* Use align-items: start; to prevent the elements
+       in the grid from stretching vertically. */
+    align-items: start;
     
+}
+.paymentContent{
+    font-size: 2rem;
+    height: 420px;
     
-    opacity: 0;
 }
-.add-to-cart-visible {
-    opacity: 1;
+.paymentOrder{
+    font-size: 2.5rem;
 }
-@media (max-width:1650px) {
-    .products-grid{
-        grid-template-columns: repeat(4, 1fr);
-    }
+.deliveryTax{
+    padding-top: 20px;
 }
-@media (max-width: 1366px){
-    .products-grid{
-        grid-template-columns: repeat(3, 1fr);
-    }
+
+
+.paymentBtn{
+    padding-top: 20px;
 }
-@media (max-width: 1010px){
-    .products-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
+
+
+.paymentContainer{
+    padding-left: 20px;
 }
-@media (max-width: 699px){
-    .products-grid{
+.payment{
+    padding: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    background-color: #ffc506;
+}
+.orderSummary h2 {
+    padding: 20px;
+}
+.orderSummary h1 {
+    padding: 15px;
+}
+
+@media (max-width:1247px){
+   
+}
+
+@media (max-width:1230px) {
+    .container{
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
+        
     }
+    
+   
+    .paymentContent {
+        width: 660px;
+    }
+    .paymentContainer{
+        padding-top: 20px;
+    }
+    
+}
+@media (max-width:995px){
+    
+}
+@media (max-width:917px){
+    .info {
+        
+        
+        
+        font-size: 1.5rem;
+       
+
+
+    
+
+    }
+}
+@media (max-width:809px){
+    
+    .img{ 
+        max-width: 200px;
+        
+        
+    }
+
+    .summaryContent{
+        width: 500px;
+    }
+    .paymentContent{
+      width: 450px;
+    }
+   
+}
+@media (max-width:501px){
+   
+    .paymentContent{
+       width: 330px;
+       font-size: 2rem;
+        
+    }
+    .image img{
+        width: 200px;
+    }
+   
+    .summaryContent {
+        width: 350px;
+        
+    }
+    .image{
+        grid-column: 1;
+        grid-template-columns: repeat(1, 1fr) ;
+        
+    }
+
+}
+@media (max-height:920px){
+    
+
 }
